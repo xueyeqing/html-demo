@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原生js实现动画效果</title>
+    <style>
+        #main {
+            width: 400px;
+            height: 300px;
+            background-color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>原生js实现slide up/slide down动画效果</h1>
+
+    <div id="main"></div>
+
+    <button id='toggleSlide'>slide up</button>
+</body>
+
+<script>
+    var div = document.getElementById('main');
+    var btn = document.getElementById('toggleSlide');
+    var height = parseInt(window.getComputedStyle(div, null).height.replace('px', ''));
+    var maxHeight = height;
+    var stepLength = 10;
+    var interval = 15;
+
+    btn.addEventListener('click', function () {
+        if (height > 0) {
+            slideUp();
+        } else {
+            slideDown();
+        }
+    }, false);
+
+    function slideUp() {
+        var intervalID = window.setInterval(function () {
+            height -= stepLength;
+            if (height <= 0) {
+                height = 0;
+                window.clearInterval(intervalID);
+            }
+            div.style.height = height + 'px';
+        }, interval);
+
+        btn.innerHTML = 'slide down';
+    }
+
+    function slideDown() {
+        var intervalID = window.setInterval(function () {
+            height += stepLength;
+            if (height > maxHeight) {
+                height = maxHeight;
+                window.clearInterval(intervalID);
+            }
+            div.style.height = height + 'px';
+        }, interval);
+
+        btn.innerHTML = 'slide up';
+    }
+</script>
+
+</html>

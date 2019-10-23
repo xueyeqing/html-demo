@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>遮罩层组件demo</title>
+    <style>
+        .dialog {
+            width: 80%;
+            max-width: 300px;
+            background-color: #fff;
+            height: 200px;
+            border-radius: 5px;
+            text-align: center;
+            position: fixed;
+            z-index: 1001;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            display: none;
+            transition: opacity 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>遮罩层组件demo</h1>
+    <button id='showMaskLayerBtn'>点击弹出遮罩层</button>
+    <div class="dialog">
+        <h2>对话框</h2>
+    </div>
+    <script src="./js/maskLayer.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

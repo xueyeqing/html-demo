@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+.show-video {
+    width: 595px;
+    margin: 20px;
+    font-size: 12px;
+}
+
+.caption {
+    height: 35px;
+    background-color: #e5e4e4;
+    border-radius: 2px;
+    border: solid 1px #d0caca;
+}
+
+.caption h2 {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 6px 0 8px;
+    line-height: 35px;
+}
+
+.page-number-wrapper {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.page-number {
+    display: flex;
+}
+
+.page-number span {
+    content: " ";
+    height: 8px;
+    width: 8px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin: 13.5px 2px;
+}
+
+.change-btn {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 6px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.btn-last {
+    display: inline-block;
+    background-image: url(./img/button.png);
+    width: 30px;
+    height: 22px;
+}
+
+.btn-next {
+    display: inline-block;
+    background-image: url(./img/button.png);
+    width: 30px;
+    height: 22px;
+    background-position: 32px 0px;
+    margin-left: -6px;
+}
+
+.caption em {
+    display: inline;
+    float: right;
+    margin: 10px 12px 0 0;
+    font-family: simsun;
+}
+
+a {
+    color: #2B93D2;
+    text-decoration: none;
+}
+
+.content {
+    position: relative;
+    height: 160px;
+    width: 595px;
+    overflow: hidden;
+    border-right: 1px solid #E7E7E7;
+    border-bottom: 1px solid #E7E7E7;
+    border-left: 1px solid #E7E7E7;
+    color: #888;
+}
+
+.content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 2700px;
+    position: relative;
+    height: 100%;
+}
+
+.content ul li {
+    display: inline;
+    float: left;
+    margin: 10px 2px 0;
+    padding: 8px;
+}
+
+.content ul li>a {
+    display: block;
+    width: 128px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.content ul li img {
+    width: 128px;
+    height: 96px;
+}
+
+.content h4 {
+    margin: 14px 0 4px 0;
+    font-weight: normal;
+}
+
+.content ul li em {
+    font-family: Verdana;
+    font-size: 0.9em;
+}
+
+.current {
+    background-color: #0095f9 !important;
+}
