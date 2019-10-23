@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="./css/index.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+  <title>图片放大镜功能</title>
+</head>
+
+<body>
+  <div id="box1">
+    <img src="./image/one.png">
+    <div id="mark">
+    </div>
+  </div>
+  <div id="box2">
+    <img src="./image/two.png">
+  </div>
+</body>
+
+</html>
+
+<script>
+  var $mark = $("#mark");
+  var $box1 = $("#box1");
+  var $box2 = $("#box2");
+  var $img = $box2.children("img");
+  $box1.on("mouseenter",
+    function (e) {
+      //首先让mark遮罩显示
+      $mark.stop().show();
+      //再让box2显示
+      $box2.stop().show();
+      move(e)
+    }).on("mousemove",
+      function (e) {
+        $mark.stop().show();
+        $box2.stop().show();
+        move(e);
+      }).on("mouseleave",
+        function (e) {
+          $mark.stop().hide();
+          $box2.stop().hide();
+        })
+
+  /**
+   * move
+   * outerHeight(): 返回元素的高度（包含 padding 和 border） 
+   * false - 默认。不包含 margin。true - 包含 margin。
+   */
+  function move(e) {
+    var l = e.clientX - $box1.offset().left - $mark.outerWidth() / 2;
+    var t = e.clientY - $box1.offset().top - $mark.outerHeight() / 2;
+    var minL = 0,
+      minT = 0;
+    var maxL = $box1.outerWidth() - $mark.outerWidth();
+    var maxT = $box1.outerHeight() - $mark.outerHeight();
+    l = l <= minL ? 0 : (l >= maxL ? maxL : l);
+    t = t <= minT ? 0 : (t >= maxT ? maxT : t);
+    $mark.css({
+      left: l,
+      top: t
+    });
+    $img.css({
+      marginLeft: -3 * l,
+      marginTop: -3 * t
+    });
+  }
+</script>
