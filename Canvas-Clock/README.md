@@ -61,14 +61,16 @@
     textBaseline(基线对齐选项)：top|hanging|middle|alphabetic|ideographic|bottom
     direction(文本方向)：ltr|rtl|inherit
 
-- 绘制图片
-    drawImage(imgElement,x,y,width,height)
+- 绘制图片 
+    drawImage(imgElement,x,y,width,height)  
+<br>
     x,y绘制图片的起始坐标
     imgElement 要绘制的图片元素,或者为一个canvas的引用
     width,height,设置图片的宽高
 
 - 裁剪图片
     drawImage(imgElement,sx, sy, swidth, sheight, x,y,width,height)
+ <br>
     imgElement 要绘制的图片元素,或者为一个canvas的引用
     sx, sy (可选)要裁剪的起始位置
     swidth, sheight (可选)要裁剪区域的宽高
@@ -76,9 +78,8 @@
     width,height (可选)原始图片的宽高
     为了不失真，一般尝试让swidth, sheight和width、height相等，x,y原点，去改变sx,sy(裁剪的起始位置)即可，实际根据需求来定
 
-- save()/restore()
-    save() 保存状态，保存在栈中，类似于数组的push
-    restore() 恢复状态，类似于数组的pop
+- save()/restore() <br>
+    save() 保存状态，保存在栈中，类似于数组的push 。<br>restore() 恢复状态，类似于数组的pop
 
 - clip()
     裁剪路径
