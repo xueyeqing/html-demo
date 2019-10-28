@@ -36,53 +36,48 @@
       将一个坐标原点向x,y正方向移动，如果坐标原点不在原来的位置，则以新的位置加上要移动的位置
   - scale(x, y) 缩放x轴和y轴分别设置缩放
   - rotate(x, y) 旋转 凡是牵扯到度数，都用公式deg乘以Math.PI/180来计算
-  - arcTo(x1,y1,x2,y2,r)
-    画圆角，一般两个直线相交的地方，用此方法绘制成圆弧，x1,y1指圆弧开始的x坐标和y坐标，x2,y2指圆弧结束的x和y坐标，r指半径
+
+  - arcTo(x1,y1,x2,y2,r) 画圆角，
+    一般两个直线相交的地方，用此方法绘制成圆弧，x1,y1指圆弧开始的x坐标和y坐标，x2,y2指圆弧结束的x和y坐标，r指半径
+
  - setLineDash/lineDashOffset/getLineDash 绘制虚线
  - setLineDash([实线长度, 间隙长度])方法接受一个数组，来指定线段与间隙的交替
  - lineDashOffset设置起始偏移量
  - getLineDash()返回当前虚线的样式，为一个数组
+
  - fillText(text, x, y [, maxWidth]) 绘制填充文本 
     text文本
     x,y指定的坐标
     maxWidth最大宽度，可选
- - strokeText(text, x, y [, maxWidth])
-    绘制文本边框
+ - strokeText(text, x, y [, maxWidth]) 绘制文本边框 <br> 
     text文本
     x,y指定坐标
     maxWidth最大宽度，可选
- - font
-    文本样式
+ - font 文本样式 <br> 
     和css设置字体相似，复合设置
     例如：context.font='100px sans-serif';
 
- - textAlign/textBaseline/direction
-    textAlign(文本对齐选项): start|end|left|right|center
-    textBaseline(基线对齐选项)：top|hanging|middle|alphabetic|ideographic|bottom
-    direction(文本方向)：ltr|rtl|inherit
+ - textAlign/textBaseline/direction <br> 
+    textAlign(文本对齐选项): start|end|left|right|center 
+    <br> textBaseline(基线对齐选项)：top|hanging|middle|alphabetic|ideographic|bottom 
+    <br> direction(文本方向)：ltr|rtl|inherit
 
-- 绘制图片 
-    drawImage(imgElement,x,y,width,height)  
-<br>
-    x,y绘制图片的起始坐标
-    imgElement 要绘制的图片元素,或者为一个canvas的引用
-    width,height,设置图片的宽高
+- 绘制图片 drawImage(imgElement,x,y,width,height) <br> 
+    <br>x,y绘制图片的起始坐标
+    <br>imgElement 要绘制的图片元素,或者为一个canvas的引用
+    <br>width,height,设置图片的宽高
 
-- 裁剪图片
-    drawImage(imgElement,sx, sy, swidth, sheight, x,y,width,height)
- <br>
-    imgElement 要绘制的图片元素,或者为一个canvas的引用
-    sx, sy (可选)要裁剪的起始位置
-    swidth, sheight (可选)要裁剪区域的宽高
-    x,y放置原始图片的位置
-    width,height (可选)原始图片的宽高
-    为了不失真，一般尝试让swidth, sheight和width、height相等，x,y原点，去改变sx,sy(裁剪的起始位置)即可，实际根据需求来定
+- 裁剪图片 drawImage(imgElement,sx, sy, swidth, sheight, x,y,width,height) <br> 
+  imgElement 要绘制的图片元素,或者为一个canvas的引用。<br> sx, sy (可选)要裁剪的起始位置
+    <br>swidth, sheight (可选)要裁剪区域的宽高
+    <br>x,y放置原始图片的位置
+    <br>width,height (可选)原始图片的宽高
+    <br>为了不失真，一般尝试让swidth, sheight和width、height相等，x,y原点，去改变sx,sy(裁剪的起始位置)即可，实际根据需求来定
 
 - save()/restore() <br>
     save() 保存状态，保存在栈中，类似于数组的push 。<br>restore() 恢复状态，类似于数组的pop
 
-- clip()
-    裁剪路径
+- clip() 裁剪路径 <br>
     把一个路径之外的内容进行裁剪，只保留路径本身内部的内容
 
 ## 用于控制动画的常用方法
