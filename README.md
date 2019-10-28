@@ -10,3 +10,4 @@
 - [slide-edge-button](./slide-edge-button/README.md)：模仿手机qq消息页面列表项左滑时出现【删除】按钮
 - [H5-audio](./H5-audio/README.md)：H5 audio 音频标签自定义样式修改以及添加播放控制事件demo
 - [Image-Magnifier](./Image-Magnifier/README.md)：图片放大镜功能
+- [Canvas-Clock](./Canvas-Clock/README.md)：canvas绘制时钟
