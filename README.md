@@ -4,9 +4,7 @@
 ---
 
 - [CSS3-3D-demo](./CSS3-3D-demo/README.md)：CSS3 3D 变换的demo
-- [flex-layout](./flex-layout/README.md)：flex布局的使用
 - [gesture-slide-SPA](./gesture-slide-SPA/README.md)：一个 H5 单页面手势滑屏切换demo
-- [JD-homepage](./JD-homepage/README.md)：京东首页布局练习
 - [mask-layer](./mask-layer/README.md)：遮罩层组件
 - [pure-js-animation](./pure-js-animation/README.md)：用原生js实现slide up/slide down动画效果
 - [slide-edge-button](./slide-edge-button/README.md)：模仿手机qq消息页面列表项左滑时出现【删除】按钮
