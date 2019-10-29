@@ -32,103 +32,357 @@
 </head>
 
 <body>
-  <div style="display: flex;flex-direction: column;margin: 30px 10px 15px">
-    <div style="overflow-y: scroll;">
-      <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;">
-        <thead>
-          <tr class="_ngth">
-            <th width="6%">序号</th>
-            <th width="14%">准考证号</th>
-            <th width="14%">姓名</th>
-            <th width="10%">学科</th>
-            <th width="8%">校级排名</th>
-            <th width="8%">校次进退步</th>
-            <th width="8%">班级排名</th>
-            <th width="8%">班次进退步</th>
-            <th width="24%" data-tableexport-display="none">操作</th>
-          </tr>
-        </thead>
-      </table>
+
+  <!-- <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;border: none"></table> -->
+
+  <div style="margin: auto;display: flex;flex-direction: column;">
+
+    <!-- 上固定上下滚动 -->
+    <div style="display: flex;flex-direction: column;margin: 10px 10px 15px">
+      <p>头部固定，上下滚动</p>
+      <div style="overflow-y: scroll;">
+        <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;">
+          <thead>
+            <tr class="_ngth">
+              <th width="6%">序号</th>
+              <th width="14%">准考证号</th>
+              <th width="14%">姓名</th>
+              <th width="10%">学科</th>
+              <th width="8%">校级排名</th>
+              <th width="8%">校次进退步</th>
+              <th width="8%">班级排名</th>
+              <th width="8%">班次进退步</th>
+              <th width="24%" data-tableexport-display="none">操作</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+
+      <div style="height: 80px;overflow-y: scroll;">
+        <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;">
+          <tbody>
+            <tr>
+              <td width="6%">1</td>
+              <td width="14%">1234566789</td>
+              <td width="14%">张正宜</td>
+              <td width="10%">语文</td>
+              <td width="8%">100</td>
+              <td width="8%">100</td>
+              <td width="8%">100</td>
+              <td width="8%">100</td>
+              <td width="24%">555</td>
+            </tr>
+
+            <tr>
+              <td width="6%">1</td>
+              <td width="14%">1234566789</td>
+              <td width="14%">张正宜</td>
+              <td width="10%">语文</td>
+              <td width="8%">100</td>
+              <td width="8%">100</td>
+              <td width="8%">100</td>
+              <td width="8%">100</td>
+              <td width="24%">555</td>
+            </tr>
+
+            <tr>
+              <td width="6%">1</td>
+              <td width="14%">1234566789</td>
+              <td width="14%">张正宜</td>
+              <td width="10%">语文</td>
+              <td width="8%">100</td>
+              <td width="8%">100</td>
+              <td width="8%">100</td>
+              <td width="8%">100</td>
+              <td width="24%">555</td>
+            </tr>
+
+            <tr>
+              <td width="6%">1</td>
+              <td width="14%">1234566789</td>
+              <td width="14%">张正宜</td>
+              <td width="10%">语文</td>
+              <td width="8%">100</td>
+              <td width="8%">100</td>
+              <td width="8%">100</td>
+              <td width="8%">100</td>
+              <td width="24%">555</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <div style="height: 80px;overflow-y: scroll;">
-      <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;">
+
+    <!-- 左右滚动 -->
+    <div style="margin: 20px auto;width: 900px;overflow: auto;">
+      <p>左右滚动</p>
+      <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;border: none">
+        <thead>
+          <tr class="_ngth">
+            <th style="min-width: 60px" rowspan="2">序 号</th>
+            <th style="min-width: 100px" rowspan="2">准考证号</th>
+            <th style="min-width: 100px" rowspan="2">姓名</th>
+            <th colspan="5">总分</th>
+            <th style="min-width: 80px" rowspan="2">语文</th>
+            <th style="min-width: 80px" rowspan="2">数学</th>
+            <th style="min-width: 80px" rowspan="2">英语</th>
+            <th style="min-width: 80px" rowspan="2">物理</th>
+          </tr>
+
+          <tr class="_ngth">
+            <th style="min-width: 80px">总分</th>
+            <th style="min-width: 100px">校级排名</th>
+            <th style="min-width: 100px">校次进退步</th>
+            <th style="min-width: 100px">班级排名</th>
+            <th style="min-width: 100px">班次进退步</th>
+          </tr>
+        </thead>
+
         <tbody>
           <tr>
-            <td width="6%">1</td>
-            <td width="14%">1234566789</td>
-            <td width="14%">张正宜</td>
-            <td width="10%">语文</td>
-            <td width="8%">100</td>
-            <td width="8%">100</td>
-            <td width="8%">100</td>
-            <td width="8%">100</td>
-            <td width="24%">555</td>
+            <td>1</td>
+            <td>123456789</td>
+            <td>张正宜</td>
+            <td>666</td>
+            <td>10</td>
+            <td>2</td>
+            <td>2</td>
+            <td>3</td>
+            <td>100</td>
+            <td>111</td>
+            <td>109</td>
+            <td>120</td>
           </tr>
-
-          <tr>
-            <td width="6%">1</td>
-            <td width="14%">1234566789</td>
-            <td width="14%">张正宜</td>
-            <td width="10%">语文</td>
-            <td width="8%">100</td>
-            <td width="8%">100</td>
-            <td width="8%">100</td>
-            <td width="8%">100</td>
-            <td width="24%">555</td>
-          </tr>
-
-          <tr>
-            <td width="6%">1</td>
-            <td width="14%">1234566789</td>
-            <td width="14%">张正宜</td>
-            <td width="10%">语文</td>
-            <td width="8%">100</td>
-            <td width="8%">100</td>
-            <td width="8%">100</td>
-            <td width="8%">100</td>
-            <td width="24%">555</td>
-          </tr>
-
-          <tr>
-            <td width="6%">1</td>
-            <td width="14%">1234566789</td>
-            <td width="14%">张正宜</td>
-            <td width="10%">语文</td>
-            <td width="8%">100</td>
-            <td width="8%">100</td>
-            <td width="8%">100</td>
-            <td width="8%">100</td>
-            <td width="24%">555</td>
-          </tr>
-
         </tbody>
       </table>
     </div>
-  </div>
 
-  <div style="margin-top: 100px;">
-    <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;border: none">
-      <thead>
-        <tr class="_ngth">
-          <th rowspan="2">序 号</th>
-          <th rowspan="2">
-            准考证号
-          </th>
-          <th rowspan="2">姓名</th>
-          <th colspan="5">总分</th>
-        </tr>
+    <!-- 左固定 -->
+    <div style="margin: 20px auto;width: 900px;overflow: hidden;">
+      <p>左固定</p>
+      <div style="display: flex;flex-direction: row;">
+        <div style="width: 30%;">
+          <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;border: none">
+            <thead>
+              <tr class="_ngth">
+                <th width="1%" style="border: none;background: #fff;padding: 2px 0"></th>
+                <th style="min-width: 60px" rowspan="2">序 号</th>
+                <th style="min-width: 100px" rowspan="2">准考证号</th>
+                <th style="min-width: 100px" rowspan="2">姓名</th>
+              </tr>
 
-        <tr class="_ngth">
-          <th>总分</th>
-          <th>校级排名</th>
-          <th>校次进退步</th>
-          <th>班级排名</th>
-          <th>班次进退步</th>
-        </tr>
-      </thead>
+              <tr class="_ngth">
+                <th style="white-space: nowrap;border: none;background: #fff"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td style="border: none;"></td>
+                <td>1</td>
+                <td>123456789</td>
+                <td>张正宜</td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="width: 70%;overflow: auto;">
+          <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;border: none">
+            <thead>
+              <tr class="_ngth">
+                <th colspan="5">总分</th>
+                <th style="min-width: 80px" rowspan="2">语文</th>
+                <th style="min-width: 80px" rowspan="2">数学</th>
+                <th style="min-width: 80px" rowspan="2">英语</th>
+                <th style="min-width: 80px" rowspan="2">物理</th>
+              </tr>
+
+              <tr class="_ngth">
+                <th style="min-width: 80px">总分</th>
+                <th style="min-width: 100px">校级排名</th>
+                <th style="min-width: 100px">校次进退步</th>
+                <th style="min-width: 100px">班级排名</th>
+                <th style="min-width: 100px">班次进退步</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>666</td>
+                <td>10</td>
+                <td>2</td>
+                <td>2</td>
+                <td>3</td>
+                <td>100</td>
+                <td>111</td>
+                <td>109</td>
+                <td>120</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 上固定+左固定 -->
+    <div style="margin: 20px auto;width: 900px;overflow: hidden;">
+      <p>上固定+左固定</p>
+      <div style="display: flex;flex-direction: row;margin: 30px 0 15px">
+        <div style="width: 30%;">
+          <!-- thead -->
+          <div>
+            <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;border: none">
+              <thead>
+                <tr class="_ngth">
+                  <th style="min-width: 60px" rowspan="2">序 号</th>
+                  <th style="min-width: 100px" rowspan="2">准考证号</th>
+                  <th style="min-width: 100px" rowspan="2">姓名</th>
+                </tr>
+              </thead>
+
+            </table>
+          </div>
+          <!-- tbody -->
+          <div style="max-height: 100px;top: 0;overflow-x: scroll;overflow-y: hidden;" id="result-table-left"
+            onscroll="onScroll()">
+            <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;border: none">
+              <tbody>
+                <tr>
+                  <td style="min-width: 60px">1</td>
+                  <td style="min-width: 100px">123456789</td>
+                  <td style="min-width: 100px">张正宜</td>
+                </tr>
+
+                <tr>
+                  <td style="min-width: 60px">1</td>
+                  <td style="min-width: 100px">123456789</td>
+                  <td style="min-width: 100px">张正宜</td>
+                </tr>
+
+                <tr>
+                  <td style="min-width: 60px">1</td>
+                  <td style="min-width: 100px">123456789</td>
+                  <td style="min-width: 100px">张正宜</td>
+                </tr>
+
+                <tr>
+                  <td style="min-width: 60px">1</td>
+                  <td style="min-width: 100px">123456789</td>
+                  <td style="min-width: 100px">张正宜</td>
+                </tr>
+
+                <tr>
+                  <td style="min-width: 60px">1</td>
+                  <td style="min-width: 100px">123456789</td>
+                  <td style="min-width: 100px">张正宜</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="width: 70%;">
+          <div style="overflow-y: scroll;overflow-x: hidden;" id="result-table-head">
+            <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;">
+              <thead>
+                <tr class="_ngth">
+                  <th style="min-width: 100px">学科</th>
+                  <th style="min-width: 100px">校级排名</th>
+                  <th style="min-width: 100px">校次进退步</th>
+                  <th style="min-width: 100px">班级排名</th>
+                  <th style="min-width: 100px">班次进退步</th>
+                  <th style="min-width: 100px">语文</th>
+                  <th style="min-width: 100px">数学</th>
+                  <th style="min-width: 100px">语文</th>
+                  <th style="min-width: 100px">数学</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div style="max-height: 100px;overflow-y: scroll;" id="result-table-body">
+            <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;">
+              <tbody>
+                <tr>
+                  <td style="min-width: 100px">语文</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                </tr>
+
+                <tr>
+                  <td style="min-width: 100px">语文</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                </tr>
+
+                <tr>
+                  <td style="min-width: 100px">语文</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                </tr>
+
+                <tr>
+                  <td style="min-width: 100px">语文</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                </tr>
+
+                <tr>
+                  <td style="min-width: 100px">语文</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                  <td style="min-width: 100px">100</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 </body>
 
 </html>
+
+<script type="text/javascript">
+  var l = document.querySelector('#result-table-left')
+  var r = document.querySelector('#result-table-body')
+  var ll = document.querySelector('#result-table-head')
+  r.addEventListener('scroll', function () {
+    l.scrollTop = r.scrollTop
+    ll.scrollLeft = r.scrollLeft
+  })
+</script>
