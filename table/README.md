@@ -5,7 +5,7 @@
 ## 要点 
 - 监听元素滚动 实现同步效果
 
-    ```
+    ```javascript
     <script type="text/javascript">
       var l = document.querySelector('#result-table-left')
       var r = document.querySelector('#result-table-body')
@@ -15,5 +15,4 @@
         ll.scrollLeft = r.scrollLeft
       })
     </script>
-    
     ```
