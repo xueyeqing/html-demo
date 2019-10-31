@@ -29,7 +29,79 @@
     var r = 150;
     //画表盘的方法
     function draw_p() {
+      cxt.lineWidth = 5;
+      cxt.strokeStyle = "#0243A3";
+      cxt.fillStyle = "#FFF7B2";
+      cxt.beginPath(); // 新开始一条路径，绘制方法被指向新路径
+      cxt.arc(x, y, r, 0, Math.PI * 2, true); // true为逆时针
+      cxt.closePath(); // 闭合当前路径，让绘制命令重新指向上下文
+      cxt.fill(); // 填充路径的内容区域生成实心图形
+      cxt.stroke(); // 通过线条来绘制图像轮廓
+
+      //刻度
+      cxt.lineWidth = 2;
+      var rk = 140;
+      var dian = ['3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '1', '2'];
+      var dx = 0;
+      for (var i = 0; i < 360; i += 6) {
+        cxt.beginPath();
+        if (i % 30 == 0) {
+          cxt.lineWidth = 3;
+          rk = 130;
+          cxt.fillStyle = "#0C3829";
+          cxt.font = " 25px '宋体'";
+          cxt.fillText(dian[dx], x + (rk - 15) * Math.cos(i * Math.PI / 180), y + (rk - 20) * Math.sin(i * Math.PI / 180));
+          dx++;
+        } else {
+          cxt.lineWidth = 2;
+          rk = 140;
+        }
+        cxt.moveTo(x + rk * Math.cos(i * Math.PI / 180), y + rk * Math.sin(i * Math.PI / 180));
+        cxt.lineTo(x + r * Math.cos(i * Math.PI / 180), y + r * Math.sin(i * Math.PI / 180));
+        cxt.closePath();
+        cxt.stroke();
+      }
+      cxt.beginPath();
+      cxt.moveTo(x + rk * Math.cos(i * Math.PI / 180), y + rk * Math.sin(i * Math.PI / 180)); // 描述起点坐标
+      cxt.lineTo(x + r * Math.cos(i * Math.PI / 180), y + r * Math.sin(i * Math.PI / 180)); // 描述终点坐标
+      cxt.closePath();
+      cxt.stroke();
 
     }
+
+    //画小圆的方法                   
+    function draw_xy() {
+      cxt.fillStyle = "#F5120D";
+      cxt.beginPath();
+      cxt.arc(x, y, 10, 0, Math.PI * 2, true);
+      cxt.fill();
+    }
+
+    //画指针方法
+    function draw_z(hms, angle, r, col, w) {
+      cxt.lineWidth = w; //线粗
+      cxt.strokeStyle = col; //颜色
+      var sr2 = r; //半径                           
+      cxt.beginPath();
+      cxt.moveTo(x, y);
+      if (hms == 's') { //秒针的小尾巴
+        var sr = 30;
+        cxt.lineTo(x + sr * Math.cos((angle + 180 - 90) * Math.PI / 180), y + sr * Math.sin((angle + 180 - 90) * Math.PI / 180));
+      }
+      cxt.lineTo(x + sr2 * Math.cos((angle - 90) * Math.PI / 180), y + sr2 * Math.sin((angle - 90) * Math.PI / 180));
+      cxt.closePath();
+      cxt.stroke();
+    }
+
+    //运动控制
+    setInterval(function () {
+      var date = new Date();
+      cxt.clearRect(0, 0, 400, 400);
+      draw_p(); //画表盘                     
+      draw_z('s', date.getSeconds() * 6, 110, 'red', 3); //  画秒针
+      draw_z('m', date.getMinutes() * 6, 90, '#000000', 4); // 画分针
+      draw_z('h', date.getHours() * 30 + (date.getMinutes() / 12 * 6), 70, '#000000', 5); // 画时针
+      draw_xy(); //画小圆
+    }, 1000);
   }
 </script>
