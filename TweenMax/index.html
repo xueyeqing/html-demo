@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TweenMax</title>
+
+  <script src="./js/TweenMax.min.js"> </script>
+
+  <style>
+    #obj {
+      position: relative;
+      left: 200px;
+      top: 20px;
+      width: 50px;
+      height: 50px;
+      background: #6fb936;
+      border-radius: 5px;
+    }
+
+    #scoreDisplay {
+      font-size: 40px;
+      text-align: center;
+      margin-top: 70px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="obj"></div>
+
+  <div id="demo">
+    <div id="scoreDisplay"></div>
+  </div>
+</body>
+
+</html>
+
+<script>
+
+  // TweenMax.to("#obj", 3, { x: 200 });//在原有位置向右移动200px
+  TweenMax.to("#obj", 3, { x: 200, y: 100 });//向右移动200px的同时向下移动100px
+
+  var demo = { score: 90 },
+    scoreDisplay = document.getElementById("scoreDisplay");
+
+  //创建一个tween在20秒内改变score的属性值从0到100.
+  var tween = TweenLite.to(demo, 20, {
+    score: 100,
+    onUpdate: showScore
+  })
+
+  //在tween update时通过这个function输出.
+  function showScore() {
+    scoreDisplay.innerHTML = demo.score.toFixed(2);
+  }
+
+</script>
