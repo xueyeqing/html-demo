@@ -1,5 +1,7 @@
 # canvas绘制时钟
 
+![](https://github.com/xueyeqing/html-demo/blob/master/Canvas-Clock/image/a.png)
+
 ## 属性及方法
 
   - beginPath() 新开始一条路径，绘制方法被指向新路径
