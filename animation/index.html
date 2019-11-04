@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>动画</title>
+  <style>
+    .btn {
+      display: inline-block;
+      width: 100px;
+      height: 45px;
+      line-height: 45px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    #content {
+      display: block;
+      position: fixed;
+      max-height: 380px;
+      min-height: 200px;
+      right: 10px;
+      top: 250px;
+      width: 240px;
+      transition: right .4s linear;
+      z-index: 1000;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #3bafda;
+    }
+
+    #content2 {
+      display: block;
+      position: fixed;
+      max-height: 380px;
+      min-height: 200px;
+      right: 10px;
+      top: 10px;
+      width: 240px;
+      transition: top .4s linear;
+      z-index: 1000;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #3bafda;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <span class="btn" onclick="start()">点击开始</span>
+  </div>
+  <div id="content"></div>
+
+  <div id="content2"></div>
+
+</body>
+
+</html>
+
+<script>
+
+  var isOpen = true;
+  function start() {
+    isOpen = !isOpen;
+    var content = document.getElementById("content");
+    var content2 = document.getElementById("content2");
+    if (isOpen) {
+      content.style.right = '10px';
+      content2.style.top = '10px';
+    } else {
+      content.style.right = '-240px';
+      content2.style.top = '-210px';
+    }
+
+  }
+</script>

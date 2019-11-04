@@ -2,8 +2,6 @@
 一些html页面或是效果的demo，算是学习笔记吧。
 
 ---
-
-- [CSS3-3D-demo](./CSS3-3D-demo/README.md)：CSS3 3D 变换的demo
 - [gesture-slide-SPA](./gesture-slide-SPA/README.md)：一个 H5 单页面手势滑屏切换demo
 - [mask-layer](./mask-layer/README.md)：遮罩层组件
 - [pure-js-animation](./pure-js-animation/README.md)：用原生js实现slide up/slide down动画效果
