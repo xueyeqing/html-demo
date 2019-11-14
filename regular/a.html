@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    .cf_table {
+      width: 100%;
+      font-size: 14px;
+      border: 1px solid #d8d8d8;
+      border-collapse: collapse;
+      border-spacing: 0
+    }
+
+    .cf_table td,
+    .cf_table th {
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+      color: #777;
+      border: 1px solid #d8d8d8
+    }
+
+    .cf_table th {
+      background: #d0eef9;
+      color: #444
+    }
+
+    p {
+      margin: 30px 0 10px 0;
+    }
+  </style>
+</head>
+
+<div>
+  <p>常用的特殊代码</p>
+  <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;">
+    <thead>
+      <tr>
+        <th>代码/语法</th>
+        <th>说明</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">.</td>
+        <td>匹配除换行符以外的任意字符</td>
+      </tr>
+
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">\w</td>
+        <td>匹配字母或数字</td>
+      </tr>
+
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">\s</td>
+        <td>匹配任意的空白符</td>
+      </tr>
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">\d</td>
+        <td>匹配数字</td>
+      </tr>
+
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">\b</td>
+        <td>匹配单词的开始或结束</td>
+      </tr>
+
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">^</td>
+        <td>匹配字符串的开始</td>
+      </tr>
+
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">$</td>
+        <td>匹配字符串的结束</td>
+      </tr>
+
+
+    </tbody>
+
+  </table>
+
+  <p>常用的量词</p>
+  <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;">
+    <thead>
+      <tr>
+        <th>代码/语法</th>
+        <th>说明</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">*</td>
+        <td>重复零次或更多次</td>
+      </tr>
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">+</td>
+        <td>重复一次或更多次</td>
+      </tr>
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">?</td>
+        <td>重复零次或一次</td>
+      </tr>
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">{n}</td>
+        <td>重复n次</td>
+      </tr>
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">{n,}</td>
+        <td>重复n次或更多次</td>
+      </tr>
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">{n,m}</td>
+        <td>重复n到m次</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>懒惰量词</p>
+  <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;">
+    <thead>
+      <tr>
+        <th>代码/语法</th>
+        <th>说明</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">*?</td>
+        <td>重复任意次，但尽可能少重复</td>
+      </tr>
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">+?</td>
+        <td>重复1次或更多次，但尽可能少重复</td>
+      </tr>
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">??</td>
+        <td>重复0次或1次，但尽可能少重复</td>
+      </tr>
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">{n,m}?</td>
+        <td>重复n到m次，但尽可能少重复</td>
+      </tr>
+      <tr>
+        <td style="color: #3bafda;font-weight: bold;">{n,}?</td>
+        <td>重复n次以上，但尽可能少重复</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+</html>

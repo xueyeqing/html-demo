@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>正则表达式（Regular）</title>
+  <script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+  <style>
+    .cf_table {
+      width: 100%;
+      font-size: 14px;
+      border: 1px solid #d8d8d8;
+      border-collapse: collapse;
+      border-spacing: 0
+    }
+
+    .cf_table td,
+    .cf_table th {
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+      color: #777;
+      border: 1px solid #d8d8d8
+    }
+
+    .cf_table th {
+      background: #d0eef9;
+      color: #444
+    }
+
+    p {
+      margin: 30px 0 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="margin: 0 auto;width: 500px;height: 900px;">
+    <iframe name="toppage" width=100% height=100% marginwidth=0 marginheight=0 frameborder="no" border="0"
+      src="a.html"></iframe>
+  </div>
+
+  <div style="margin: 0 auto;width: 500px;">
+    <p>常用正则表达式</p>
+    <table class="cf_table" style="border-collapse: collapse;border-spacing: 0;">
+      <tbody>
+        <tr>
+          <td style="color: #3bafda;font-weight: bold;">[\u4e00-\u9fa5]</td>
+          <td>匹配中文字符</td>
+        </tr>
+
+        <tr>
+          <td style="color: #3bafda;font-weight: bold;">[^\x00-\xff]</td>
+          <td style="cursor: pointer;" title="如：！￥（） 张">匹配双字节字符（包括中文）</td>
+        </tr>
+
+        <tr>
+          <td style="color: #3bafda;font-weight: bold;"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="color: #3bafda;font-weight: bold;"></td>
+          <td></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+  <div style="min-height: 100px;"></div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+</script>
