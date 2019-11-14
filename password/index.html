@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>原生Js 6位密码输入框</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    input {
+      display: inline-block;
+      height: 30px;
+      cursor: pointer;
+      background: #ffffff;
+      width: 30px;
+      border: 2px solid groove;
+      position: absolute;
+      top: 100px;
+      opacity: .5;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" id="p1" oninput="if(value.length>1)value=value.slice(0,1)" class="hello" onkeypress="keypress(1)"
+    value="" style=" left: 100px; ">
+  <input type="text" id="p2" oninput="if(value.length>1)value=value.slice(0,1)" class="hello" onkeypress="keypress(2)"
+    value="" style=" left: 135px;">
+  <input type="text" id="p3" oninput="if(value.length>1)value=value.slice(0,1)" class="hello" onkeypress="keypress(3)"
+    value="" style=" left: 170px; ">
+  <input type="text" id="p4" oninput="if(value.length>1)value=value.slice(0,1)" class="hello" onkeypress="keypress(4)"
+    value="" style=" left: 205px; ">
+  <input type="text" id="p5" oninput="if(value.length>1)value=value.slice(0,1)" class="hello" onkeypress="keypress(5)"
+    value="" style=" left: 240px; ">
+  <input type="text" id="p6" oninput="if(value.length>1)value=value.slice(0,1)" class="hello" onkeypress="keypress(6)"
+    value="" style=" left: 275px; ">
+</body>
+
+</html>
+
+<script>
+  window.onload = function () {
+    window.onkeydown = function () {
+      if (event.code == "Backspace") {
+        var eles = document.getElementsByClassName("hello");
+        for (var i = 0; i < eles.length; i++) {
+          if (eles[i] == document.activeElement) {
+            if (i == 0) {
+              break;
+            }
+            if (eles[i].value == "") {
+              eles[i - 1].value = "";
+              eles[i - 1].name = "";
+              eles[i - 1].focus();
+            }
+            break;
+          }
+        }
+      }
+
+    }
+
+    var eles = document.getElementsByClassName("hello");
+    for (var i = 0; i < eles.length; i++) {
+      var ele = eles[i];
+      ele.onfocus = function () { // 获取当前聚焦元素
+        var str = this.id
+        var vv = str.substr(1, str.length);
+        var a = parseInt(vv);
+        if (this.name == "") {
+          jumHead(a);
+        } else if (this.name != "") {
+          jumEnd(a)
+        }
+      }
+    }
+  }
+
+  function jumHead(n) {
+    for (var j = 1; j < n; j++) {
+      var v1 = document.getElementById("p" + j);
+      if (v1.name == "") {
+        v1.focus();
+        break;
+      }
+    }
+  }
+
+  function jumEnd(n) {
+    for (var j = n; j < 7; j++) {
+      var v1 = document.getElementById("p" + j);
+      if (j == 6) {
+        v1.focus();
+        break;
+      }
+      if (v1.value == "") {
+        v1.focus();
+        break;
+      }
+    }
+  }
+
+  function keypress(val) {
+    var ev = window.event;
+    var nowindex = val;
+    var nextindex = val + 1;
+    if (nextindex == 7) {
+      var inputele = document.getElementById("p" + nowindex);
+      inputele.value = ev.key;
+      inputele.blur();
+      return;
+    }
+    var inputelenow = document.getElementById("p" + nowindex);
+    inputelenow.name = ev.key;
+    var inputele = document.getElementById("p" + nextindex);
+    inputele.focus();
+  }
+
+
+</script>

@@ -9,6 +9,8 @@
 - [Canvas-Clock](./Canvas-Clock/README.md)：canvas绘制时钟
 - [Table](./table/README.md): table 表格的实现
 - [window-Scroll](./window-Scroll/README.md): 滚动监听
+- [window-Scroll](): 正则
+- [password](./passowrd/README.md): 原生Js 6位密码输入框
 
 > 11
 >> 22
